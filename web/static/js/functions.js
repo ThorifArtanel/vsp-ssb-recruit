@@ -1,10 +1,4 @@
 /*================================================
-*
-* Template name : Mono
-* Version       : 8.2
-* Author        : FlaTheme
-* Author URL    : http://themeforest.net/user/flatheme
-*
 * Table of Contents : 
 * 1.  Preloaders
 * 2.  Scroll Animations

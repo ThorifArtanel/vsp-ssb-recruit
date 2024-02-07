@@ -15,7 +15,6 @@ func main() {
 
 	r.StaticFS("/assets/images", http.Dir("./web/static/images"))
 	r.StaticFS("/assets/svg", http.Dir("./web/static/svg"))
-
 	r.StaticFS("/assets/css", http.Dir("./web/static/css"))
 	r.StaticFS("/assets/js", http.Dir("./web/static/js"))
 	r.StaticFS("/assets/plugins", http.Dir("./web/static/plugins"))
