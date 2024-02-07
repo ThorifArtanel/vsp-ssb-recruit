@@ -705,7 +705,7 @@ $("#contactform").on("submit", function(e) {
 
   else {
     $.ajax({
-      url:"assets/php/contact-form.php",
+      url:"api/contact-form",
       data:$(this).serialize(),
       type:"POST",
       success:function(data){
