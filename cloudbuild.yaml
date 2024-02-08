@@ -29,8 +29,6 @@ steps:
         "5",
         "--min-instances",
         "0",
-        "--containerport",
-        "8080",
       ]
 images:
   - gcr.io/$PROJECT_ID/landing-page-ssb-recruitment
