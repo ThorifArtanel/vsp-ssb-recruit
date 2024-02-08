@@ -1,11 +1,11 @@
 steps:
   # Build Docker image
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/landing-page-ssb-recruitment", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/hr-ssb", "."]
 
   # Push Docker image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/landing-page-ssb-recruitment"]
+    args: ["push", "gcr.io/$PROJECT_ID/hr-ssb"]
 
   # Deploy to Cloud Run
   - name: "gcr.io/cloud-builders/gcloud"
@@ -13,7 +13,7 @@ steps:
         "run",
         "deploy",
         "landing-page-ssb-recruitment",
-        "--image=gcr.io/$PROJECT_ID/landing-page-ssb-recruitment",
+        "--image=gcr.io/$PROJECT_ID/hr-ssb",
         "--region",
         "asia-southeast2",
         "--platform",
@@ -33,4 +33,4 @@ steps:
         # "8080",
       ]
 images:
-  - gcr.io/$PROJECT_ID/landing-page-ssb-recruitment
+  - gcr.io/$PROJECT_ID/hr-ssb
