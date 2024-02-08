@@ -2,6 +2,8 @@ steps:
   # Build Docker image
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/landing-page-ssb-recruitment", "."]
+  options:
+    logging: CLOUD_LOGGING_ONLY
 
   # Push Docker image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
