@@ -1,0 +1,55 @@
+{{define "jobdesc"}}
+<!-- Lowongan Lists -->
+<ul class="nav nav-pills mb-3">
+  {{range .}}
+  <li class="nav-item">
+    {{if .IsActive}}
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#{{.Id}}">{{.Name}}</button>
+    {{else}}
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#{{.Id}}">{{.Name}}</button>
+    {{end}}
+  </li>
+  {{end}}
+</ul>
+<div class="tab-content">
+  {{range .}}
+    {{if .IsActive}}
+      <div class="tab-pane fade show active" id="{{.Id}}">
+    {{else}}
+      <div class="tab-pane fade" id="{{.Id}}">
+    {{end}}
+        <ol class="list-ordered style-3 mb-3">
+          <li><p class="fw-normal">Level : {{.Infos.Level}}</p></li>
+          <li><p class="fw-normal">Kebutuhan : {{.Infos.Kebutuhan}}</p></li>
+          <li><p class="fw-normal">Penempatan : {{.Infos.Penempatan}}</p></li>
+        </ol>
+        <div class="row icon-5xl g-4">
+          <div class="col-12 col-md-4">
+            <h5 class="fw-normal mt-2">Job Desk</h5>
+            <ul class="list-dash">
+              {{range .JobDesc}}
+              <li>{{.}}</li>
+              {{end}}
+            </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <h5 class="fw-normal mt-2">Kualifikasi Umum</h5>
+            <ul class="list-dash">
+              {{range .QGeneric}}
+              <li>{{.}}</li>
+              {{end}}
+            </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <h5 class="fw-normal mt-2">Kualifikasi Khusus</h5>
+            <ul class="list-dash">
+              {{range .QSpecific}}
+              <li>{{.}}</li>
+              {{end}}
+            </ul>
+          </div>
+        </div>
+      </div>
+  {{end}}
+</div><!-- end Lowongan List -->
+{{end}}
