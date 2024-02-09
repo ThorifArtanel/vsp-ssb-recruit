@@ -7,6 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	api "gitlab.com/vsp-ssb/landing-page-recruitment/api"
+	"gitlab.com/vsp-ssb/landing-page-recruitment/web/app"
 )
 
 func main() {
@@ -18,10 +19,9 @@ func main() {
 	r.StaticFS("/assets/js", http.Dir("web/static/js"))
 	r.StaticFS("/assets/plugins", http.Dir("web/static/plugins"))
 
-	r.LoadHTMLGlob("web/static/html/*.html")
-	r.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", gin.H{})
-	})
+	r.LoadHTMLFiles("web/static/html/404.html", "web/static/html/500.html")
+	r.LoadHTMLGlob("web/templates/*.html")
+	r.GET("/", app.PageRenderer)
 
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusNotFound, "404.html", gin.H{})
