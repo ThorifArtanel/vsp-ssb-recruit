@@ -30,7 +30,33 @@ type Info struct {
 func PageRenderer(c *gin.Context) {
 	spesifications := []Spesifications{
 		{
-			Id:       "recruitment-selection-staff-solo",
+			Id:   "internalaudit-seniormanager-bugged",
+			Name: "Internal Audit",
+			Infos: Info{
+				Divisi:     "Internal Audit",
+				Level:      "Senior Manager",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:   "cultureorganizationaldevelopment-manager-bugged",
+			Name: "Culture Organizational Development",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Manager",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:       "recruitmentandselection-staff-solo",
 			Name:     "Recruitment & Selection",
 			IsActive: true,
 			Infos: Info{
@@ -75,7 +101,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "ssb-corp-university-staff-solo",
+			Id:   "ssbcorpuniversity-staff-solo",
 			Name: "SSB Corp University",
 			Infos: Info{
 				Divisi:     "Human Capital",
@@ -121,7 +147,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "sotfware-engineer-staff-solo",
+			Id:   "sotfwareengineer-staff-solo",
 			Name: "Sotfware Engineer",
 			Infos: Info{
 				Divisi:     "IT",
@@ -144,7 +170,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "p2o-ho-manager-solo",
+			Id:   "p2oho-manager-solo",
 			Name: "P2O (HO)",
 			Infos: Info{
 				Divisi:     "Operational",
@@ -160,7 +186,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "p2o-ho-supervisor-solo",
+			Id:   "p2oho-supervisor-solo",
 			Name: "P2O (HO)",
 			Infos: Info{
 				Divisi:     "Operational",
@@ -170,7 +196,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "catering-ho-manager-solo",
+			Id:   "cateringho-manager-solo",
 			Name: "Catering (HO)",
 			Infos: Info{
 				Divisi:     "Operational",
@@ -180,7 +206,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "catering-ho-supervisor-solo",
+			Id:   "cateringho-supervisor-solo",
 			Name: "Catering (HO)",
 			Infos: Info{
 				Divisi:     "Operational",
@@ -190,7 +216,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "produksi-ho-operational-manager",
+			Id:   "produksiho-manager-solo",
 			Name: "Produksi (HO)",
 			Infos: Info{
 				Divisi:     "Operational",
@@ -207,7 +233,20 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "general-affair-area-bali",
+			Id:   "manageroutlet-supervisor-bugged",
+			Name: "Manager Outlet",
+			Infos: Info{
+				Divisi:     "Operational",
+				Level:      "Supervisor",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:   "generalaffairarea-staff-bali",
 			Name: "General Affair Area (Bali)",
 			Infos: Info{
 				Divisi:     "Human Capital",
@@ -224,7 +263,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "general-affair-area-surabaya",
+			Id:   "generalaffairarea-staff-surabaya",
 			Name: "General Affair Area (Surabaya)",
 			Infos: Info{
 				Divisi:     "Human Capital",
@@ -241,7 +280,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "general-affair-area-pantura",
+			Id:   "generalaffairarea-staff-pantura",
 			Name: "General Affair Area (Pantura)",
 			Infos: Info{
 				Divisi:     "Human Capital",
@@ -258,7 +297,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "general-affair-area-sumatra",
+			Id:   "generalaffairarea-staff-sumatra",
 			Name: "General Affair Area (Sumatra)",
 			Infos: Info{
 				Divisi:     "Human Capital",
@@ -275,7 +314,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "finance-area-bali",
+			Id:   "financearea-staff-bali",
 			Name: "Finance Area (Bali)",
 			Infos: Info{
 				Divisi:     "Finance & Accounting",
@@ -292,7 +331,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "finance-area-surabaya",
+			Id:   "financearea-staff-surabaya",
 			Name: "Finance Area (Surabaya)",
 			Infos: Info{
 				Divisi:     "Finance & Accounting",
@@ -309,7 +348,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "finance-area-pantura",
+			Id:   "financearea-staff-pantura",
 			Name: "Finance Area (Pantura)",
 			Infos: Info{
 				Divisi:     "Finance & Accounting",
@@ -326,7 +365,7 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "finance-area-jakarta",
+			Id:   "financearea-staff-jakarta",
 			Name: "Finance Area (Jakarta)",
 			Infos: Info{
 				Divisi:     "Finance & Accounting",
@@ -343,20 +382,478 @@ func PageRenderer(c *gin.Context) {
 			},
 		},
 		{
-			Id:   "",
-			Name: "",
+			Id:   "accounting-supervisor-solo",
+			Name: "Accounting",
 			Infos: Info{
-				Divisi:     "",
-				Level:      "",
-				Kebutuhan:  "",
-				Penempatan: "",
+				Divisi:     "Finance & Accounting",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
 			},
 			JobDesc: []string{
-				"",
-				"",
-				"",
-				"",
-				"",
+				"Menyediakan data dan laporan keuangan yang akurat",
+				"Menyusun laporan keuangan sesuai dengan PSAK untuk mengetahui kondisi keuangan perusahaan",
+				"Membuat analisa laporan keuangan",
+				"Menyusun laporan evaluasi analisa keuangan untuk bagian terkait",
+			},
+		},
+		{
+			Id:   "accountpayablecollector-staff-solo",
+			Name: "Account Payable Collector",
+			Infos: Info{
+				Divisi:     "Finance & Accounting",
+				Level:      "Staff",
+				Kebutuhan:  "2",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Memeriksa alur dan kelengkapan berkas pengajuan anggaran",
+				"Menyerahkan berkas pengajuan anggaran kepada AP Verificator",
+				"Menerima dan mengirimkan bukti transfer pengajuan anggaran kepada pihak terkait",
+				"Mengumpulkan laporan penggunaan/realisasi anggaran",
+				"Mengontrol penggunaan anggaran Petty Cash operasional di seluruh Outlet",
+			},
+		},
+		{
+			Id:   "bookkeeper-staff-solo",
+			Name: "Book Keeper",
+			Infos: Info{
+				Divisi:     "Finance & Accounting",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Melaksanakan dan menyusun laporan Cashopname Bank",
+				"Menyusun Laporan Realisasi RAB outlet baru",
+				"Menyusun Laporan Harta Outlet",
+				"Menyusun Laporan Laba Rugi Outlet Kepada Mitra",
+				"Melakukan pengarsipan dokumen berjalan sesuai degan ketentuan",
+			},
+		},
+		{
+			Id:   "generalaccountingbank-staff-solo",
+			Name: "General Accounting Bank",
+			Infos: Info{
+				Divisi:     "Finance & Accounting",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Menyusun Laporan Cashopname Bank",
+				"Melakukan penjurnalan semua data transaksi sesuai ketentuan perusahaan",
+				"Menyusun Laporan Petty Cash",
+				"Mengumpulkan data dan verifikasi transaksi petty cash outlet",
+				"Mengecek dan memastikan dokumen transaksi sesuai dengan SOP",
+				"Mengarsipkan dokument transaksi berdasarkan masing-masing outlet",
+			},
+		},
+		{
+			Id:   "staffarsip-staff-solo",
+			Name: "Staff Arsip",
+			Infos: Info{
+				Divisi:     "Finance & Accounting",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Melakukan pengelolaan arsip dinamis maupun statis",
+				"Mengumpulkan seluruh bukti transaksi/dokumen penting lain secara periodik",
+				"Melakukan pengolahan dan penyajian arsip menjadi informasi yang dibutuhkan",
+				"Menjaga ketersediaan arsip yang autentik dan terpercaya sebagai alat bukti yang sah",
+			},
+		},
+		{
+			Id:   "staffcostaccounting-staff-solo",
+			Name: "Staff Cost Accounting",
+			Infos: Info{
+				Divisi:     "Finance & Accounting",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Melakukan perencanaan, mengatur dan mengontrol analisis keuangan",
+				"Melakukan analisis laporan efisiensi produksi",
+				"Membuatkan laporan harga pokok produksi",
+				"Melakukan analisa harga bahan baku",
+			},
+		},
+		{
+			Id:   "recruitment&assessment-staff-solo",
+			Name: "Recruitment & Assessment",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Membuat konten flyer (job vacancy) & job posting",
+				"Melakukan screening dan seleksi calon karyawan",
+				"Melaksanakan interview calon karyawan outlet",
+				"Mengolah data dan hasil seleksi calon karyawan",
+				"Melaksanakan proses assessment untuk promosi dan mutasi",
+			},
+		},
+		{
+			Id:   "learning&development-supervisor-solo",
+			Name: "Learning & Development",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Menganalisa kebutuhan pada pelatihan untuk meningkatkan keterampilan karyawan",
+				"Merencanakan pelaksanaan training karyawan baru maupun existing",
+				"Melakukan evaluasi hasil pelaksanaan training karyawan",
+				"Merancang jenis dan metode pelatihan atau training sesuai kebutuhan perusahaan",
+			},
+		},
+		{
+			Id:   "learning&development-staff-solo",
+			Name: "Learning & Development",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Menyusun surat menyurat",
+				"Melaksanakan pelatihan internal perusahaan",
+				"Menjalankan training booth camp",
+				"Menyusun laporan pelaksanaan training",
+				"Menjalankan fungsi event organizer dalam acara internal perusahaan",
+			},
+		},
+		{
+			Id:   "hcarea-supervisor-bali",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Bali",
+			},
+			JobDesc: []string{
+				"Menyusun dan mengevaluasi man power planning (MPP) outlet",
+				"Melakukan seleksi calon karyawan baru",
+				"Melakukan coaching, counseling dan mentoring karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+				"Memastikan penegakan peraturan perusahaan diseluruh outlet",
+			},
+		},
+		{
+			Id:   "hcarea-supervisor-surabaya",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Surabaya",
+			},
+			JobDesc: []string{
+				"Menyusun dan mengevaluasi man power planning (MPP) outlet",
+				"Melakukan seleksi calon karyawan baru",
+				"Melakukan coaching, counseling dan mentoring karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+				"Memastikan penegakan peraturan perusahaan diseluruh outlet",
+			},
+		},
+		{
+			Id:   "hcarea-supervisor-pantura",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Pantura",
+			},
+			JobDesc: []string{
+				"Menyusun dan mengevaluasi man power planning (MPP) outlet",
+				"Melakukan seleksi calon karyawan baru",
+				"Melakukan coaching, counseling dan mentoring karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+				"Memastikan penegakan peraturan perusahaan diseluruh outlet",
+			},
+		},
+		{
+			Id:   "hcarea-supervisor-sumatra",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Sumatra",
+			},
+			JobDesc: []string{
+				"Menyusun dan mengevaluasi man power planning (MPP) outlet",
+				"Melakukan seleksi calon karyawan baru",
+				"Melakukan coaching, counseling dan mentoring karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+				"Memastikan penegakan peraturan perusahaan diseluruh outlet",
+			},
+		},
+		{
+			Id:   "hcarea-staff-solo",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Menyusun surat menyurat",
+				"Melakukan seleksi calon karyawan baru",
+				"Memastikan penyerahan benefit seluruh karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+			},
+		},
+		{
+			Id:   "hcarea-staff-pantura",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Pantura",
+			},
+			JobDesc: []string{
+				"Menyusun surat menyurat",
+				"Melakukan seleksi calon karyawan baru",
+				"Memastikan penyerahan benefit seluruh karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+			},
+		},
+		{
+			Id:   "hcarea-staff-bandung",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Bandung",
+			},
+			JobDesc: []string{
+				"Menyusun surat menyurat",
+				"Melakukan seleksi calon karyawan baru",
+				"Memastikan penyerahan benefit seluruh karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+			},
+		},
+		{
+			Id:   "hcarea-staff-jakarta",
+			Name: "HC Area",
+			Infos: Info{
+				Divisi:     "Human Capital",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Jakarta",
+			},
+			JobDesc: []string{
+				"Menyusun surat menyurat",
+				"Melakukan seleksi calon karyawan baru",
+				"Memastikan penyerahan benefit seluruh karyawan",
+				"Melaksanakan pelatihan internal perusahaan",
+			},
+		},
+		{
+			Id:   "marketing-seniormanager-bugged",
+			Name: "Marketing",
+			Infos: Info{
+				Divisi:     "Marketing",
+				Level:      "Senior Manager",
+				Kebutuhan:  "0",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:   "kontenkreator-supervisor-solo",
+			Name: "Konten Kreator",
+			Infos: Info{
+				Divisi:     "Marketing",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Menulis, meninjau, mengedit, dan membuat konten untuk platform yang digunakan perusahaan",
+				"Melakukan riset dan interview untuk mempelajari tren terkini serta dalam pengembangan konten",
+				"Mempersiapkan materi promosi",
+				"Menggunakan media sosial untuk consumer engagement, merespons komplain, dan mempromosikan produk/layanan perusahaan",
+				"Mengelola media sosial dan company website",
+				"Meningkatkan traffic melalui konten yang dibuat",
+			},
+		},
+		{
+			Id:   "customerrelationmarketing-supervisor-solo",
+			Name: "Customer Relation Marketing",
+			Infos: Info{
+				Divisi:     "Marketing",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Melacak prospek atau calon pembeli",
+				"Melakukan follow up customer pasif",
+				"Melakukan follow up untuk perbaikan pada produk yang dikomplain",
+				"Mengelola hubungan baik dengan pelanggan",
+			},
+		},
+		{
+			Id:   "marketingbranding-staff-solo",
+			Name: "Marketing Branding",
+			Infos: Info{
+				Divisi:     "Marketing",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Mengikuti dan mengorganisir keikutsertaan dalam event eksternal",
+				"Melakukan pembaharuan materi branding outlet",
+				"Melakukan optimalisasi sosial media",
+				"Melakukan kerjasama dengan pihak eksternal untuk melakukan promosi",
+			},
+		},
+		{
+			Id:   "marketingsales-supervisor-solo",
+			Name: "Marketing Sales",
+			Infos: Info{
+				Divisi:     "Marketing",
+				Level:      "Supervisor",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Menyusun strategi penjualan produk",
+				"Menganalisa pasar dan tren",
+				"Mencari target konsumen",
+				"Melakukan penawaran produk kepada konsumen/instansi",
+				"Merekap dan menganalisa laporan hasil penjualan",
+			},
+		},
+		{
+			Id:   "surveyor-staff-solo",
+			Name: "Surveyor",
+			Infos: Info{
+				Divisi:     "Business Development",
+				Level:      "Staff",
+				Kebutuhan:  "2",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Mencari area atau lokasi prospek secara online maupun offline",
+				"Melakukan survei dan pemetaan lahan untuk keperluan opening outlet",
+				"Menganalisa potensi area sekitar lokasi yang disurvei",
+				"Membuat laporan dari hasil survei dan mempresentasikan kepada atasan",
+			},
+		},
+		{
+			Id:   "kemitraan-staff-solo",
+			Name: "Kemitraan",
+			Infos: Info{
+				Divisi:     "Business Development",
+				Level:      "Staff",
+				Kebutuhan:  "1",
+				Penempatan: "Solo",
+			},
+			JobDesc: []string{
+				"Memberikan informasi perusahaan kepada investor secara persuasif",
+				"Menjadwalkan sosialisasi sistem kerjasama dengan invenstor",
+				"Melakukan sosialisasi sistem kerjasama kepada calon investor",
+				"Menjaga hubungan baik perusahaan dengan investor",
+			},
+		},
+		{
+			Id:   "supplychainmanagement-seniormanager-bugged",
+			Name: "Supply Chain Management",
+			Infos: Info{
+				Divisi:     "SCM",
+				Level:      "Senior Manager",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Memberikan informasi perusahaan kepada investor secara persuasif",
+				"Menjadwalkan sosialisasi sistem kerjasama dengan invenstor",
+				"Melakukan sosialisasi sistem kerjasama kepada calon investor",
+				"Menjaga hubungan baik perusahaan dengan investor",
+			},
+		},
+		{
+			Id:   "logisticarea-supervisor-bugged",
+			Name: "Logistic Area",
+			Infos: Info{
+				Divisi:     "SCM",
+				Level:      "Supervisor",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:   "purchasing-staff-bugged",
+			Name: "Purchasing",
+			Infos: Info{
+				Divisi:     "Central Kitchen",
+				Level:      "Staff",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:   "supplyplan-staff-bugged",
+			Name: "Supply Plan",
+			Infos: Info{
+				Divisi:     "SCM",
+				Level:      "Staff",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:   "warehouse-supervisor-bugged",
+			Name: "Warehouse",
+			Infos: Info{
+				Divisi:     "SCM",
+				Level:      "Supervisor",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
+			},
+		},
+		{
+			Id:   "maintenanceataumekanik-supervisor-bugged",
+			Name: "Maintenance / Mekanik",
+			Infos: Info{
+				Divisi:     "Central Kitchen",
+				Level:      "Supervisor",
+				Kebutuhan:  "Bugged",
+				Penempatan: "Bugged",
+			},
+			JobDesc: []string{
+				"Bugged",
 			},
 		},
 	}
