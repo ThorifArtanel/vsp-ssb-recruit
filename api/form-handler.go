@@ -1,12 +1,17 @@
 package apis
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
+	"io"
 	"log"
+	"mime/multipart"
 	"net/http"
 	"os"
+	"time"
 
+	"cloud.google.com/go/storage"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	_ "github.com/marcboeker/go-duckdb"
@@ -110,7 +115,7 @@ func FormHandler(c *gin.Context) {
 
 	id := uuid.New()
 	_, err = db.Exec(`
-		COPY datum TO 's3://` + os.Getenv("BUCKET_NAME") + `/` + id.String() + `.parquet'`)
+		COPY datum TO 's3://` + os.Getenv("BUCKET_NAME") + `/forms/` + id.String() + `.parquet'`)
 	if err != nil {
 		fmt.Printf("failed uploading to S3: %+v\n", err)
 		c.JSON(http.StatusInternalServerError, gin.H{
@@ -119,4 +124,55 @@ func FormHandler(c *gin.Context) {
 		})
 		return
 	}
+
+	f, err := c.FormFile("cv")
+	if err != nil {
+		log.Print(err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+	blobFile, err := f.Open()
+	if err != nil {
+		log.Print(err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"status": http.StatusInternalServerError,
+			"msg":    "Error Opening File",
+		})
+		return
+	}
+
+	obj := fmt.Sprintf("cv-%s-%s", id.String(), time.Now().Format("20060102-150405"))
+
+	err = fileUploader("cvs/"+obj, &blobFile)
+	if err != nil {
+		log.Print(err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"status": http.StatusInternalServerError,
+			"msg":    "Failed Uploading File",
+		})
+		return
+	}
+}
+
+func fileUploader(objName string, file *multipart.File) error {
+	client, err := storage.NewClient(context.Background())
+	if err != nil {
+		return err
+	}
+
+	ctx := context.Background()
+	ctx, cancel := context.WithTimeout(ctx, time.Second*50)
+	defer cancel()
+
+	wc := client.Bucket(os.Getenv("BUCKET_NAME")).Object(objName).NewWriter(ctx)
+	if _, err := io.Copy(wc, *file); err != nil {
+		return err
+	}
+	if err := wc.Close(); err != nil {
+		return err
+	}
+
+	return nil
 }
