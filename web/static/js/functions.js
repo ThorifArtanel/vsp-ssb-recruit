@@ -689,6 +689,7 @@ $("#contactform").on("submit", function(e) {
   var campus_name = $("#campus_name").val();
   var city_birthplace = $("#city_birthplace").val();
   var city_residency = $("#city_residency").val();
+  var cv = $("#cv").val();
 
   if (name === "") {
     $("#name").addClass("error-color");
@@ -719,6 +720,9 @@ $("#contactform").on("submit", function(e) {
   }
   if (city_residency === "") {
     $("#city_residency").addClass("error-color");
+  }
+  if (cv === "") {
+    $("#cv").addClass("error-color");
   }
 
   else {
