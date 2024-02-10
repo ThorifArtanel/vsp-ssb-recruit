@@ -32,6 +32,7 @@ steps:
         "--set-env-vars",
         "BUCKET_NAME=HRSSB",
       ]
+    secretEnv: ['KEYID', 'KEYSECRET']
 images:
   - gcr.io/$PROJECT_ID/landing-page-ssb-recruitment
 availableSecrets:
