@@ -29,8 +29,16 @@ steps:
         "5",
         "--min-instances",
         "0",
+        "--set-env-vars",
+        "BUCKET_NAME=HRSSB",
       ]
 images:
   - gcr.io/$PROJECT_ID/landing-page-ssb-recruitment
+availableSecrets:
+  secretManager:
+  - versionName: projects/$PROJECT_ID/secrets/s3-landing-page-key/versions/latest
+    env: 'KEYID'
+  - versionName: projects/$PROJECT_ID/secrets/s3-landing-page-secret/versions/latest
+    env: 'KEYSECRET'
 options:
   logging: CLOUD_LOGGING_ONLY
