@@ -728,7 +728,7 @@ $("#contactform").on("submit", function(e) {
   else {
     $.ajax({
       url:"api/contact-form",
-      data:$(this).serialize(),
+      data:new FormData(this),
       type:"POST",
       success:function(data){
         $("#success").addClass("show-result"); //=== Show Success Message==
