@@ -678,74 +678,74 @@ if (mapCanvas.length) {
 /*===============================================
   20. Contact Form
 ===============================================*/
-$("#contactform").on("submit", function(e) {
-  var name = $("#name").val();
-  var email = $("#email").val();
-  var phone = $("#phone").val();
-  var age = $("#age").val();
-  var religion = $("#religion").val();
-  var gender = $("#gender").val();
-  var degree = $("#degree").val();
-  var campus_name = $("#campus_name").val();
-  var city_birthplace = $("#city_birthplace").val();
-  var city_residency = $("#city_residency").val();
-  var cv = $("#cv").val();
+// $("#contactform").on("submit", function(e) {
+//   var name = $("#name").val();
+//   var email = $("#email").val();
+//   var phone = $("#phone").val();
+//   var age = $("#age").val();
+//   var religion = $("#religion").val();
+//   var gender = $("#gender").val();
+//   var degree = $("#degree").val();
+//   var campus_name = $("#campus_name").val();
+//   var city_birthplace = $("#city_birthplace").val();
+//   var city_residency = $("#city_residency").val();
+//   var cv = $("#cv").val();
 
-  if (name === "") {
-    $("#name").addClass("error-color");
-  }
-  if (email === "") {
-    $("#email").addClass("error-color");
-  }
-  if (phone === "") {
-    $("#phone").addClass("error-color");
-  }
-  if (age === "") {
-    $("#age").addClass("error-color");
-  }
-  if (religion === "") {
-    $("#religion").addClass("error-color");
-  }
-  if (gender === "") {
-    $("#gender").addClass("error-color");
-  }
-  if (degree === "") {
-    $("#degree").addClass("error-color");
-  }
-  if (campus_name === "") {
-    $("#campus_name").addClass("error-color");
-  }
-  if (city_birthplace === "") {
-    $("#city_birthplace").addClass("error-color");
-  }
-  if (city_residency === "") {
-    $("#city_residency").addClass("error-color");
-  }
-  if (cv === "") {
-    $("#cv").addClass("error-color");
-  }
+//   if (name === "") {
+//     $("#name").addClass("error-color");
+//   }
+//   if (email === "") {
+//     $("#email").addClass("error-color");
+//   }
+//   if (phone === "") {
+//     $("#phone").addClass("error-color");
+//   }
+//   if (age === "") {
+//     $("#age").addClass("error-color");
+//   }
+//   if (religion === "") {
+//     $("#religion").addClass("error-color");
+//   }
+//   if (gender === "") {
+//     $("#gender").addClass("error-color");
+//   }
+//   if (degree === "") {
+//     $("#degree").addClass("error-color");
+//   }
+//   if (campus_name === "") {
+//     $("#campus_name").addClass("error-color");
+//   }
+//   if (city_birthplace === "") {
+//     $("#city_birthplace").addClass("error-color");
+//   }
+//   if (city_residency === "") {
+//     $("#city_residency").addClass("error-color");
+//   }
+//   if (cv === "") {
+//     $("#cv").addClass("error-color");
+//   }
 
-  else {
-    $.ajax({
-      url:"api/contact-form",
-      data:new FormData(this),
-      type:"POST",
-      success:function(data){
-        $("#success").addClass("show-result"); //=== Show Success Message==
-        $("#contactform").each(function(){
-          this.reset();
-        });
-      },
-      error:function(data){
-        $("#error").addClass("show-result"); //===Show Error Message====
-      }
-    });
-    var forms = $("#contactform input, #contactform textarea");
-    forms.removeClass("error-color");
-  }
+//   else {
+//     $.ajax({
+//       url:"api/contact-form",
+//       data:$(this).serialize(),
+//       type:"POST",
+//       success:function(data){
+//         $("#success").addClass("show-result"); //=== Show Success Message==
+//         $("#contactform").each(function(){
+//           this.reset();
+//         });
+//       },
+//       error:function(data){
+//         $("#error").addClass("show-result"); //===Show Error Message====
+//       }
+//     });
+//     var forms = $("#contactform input, #contactform textarea");
+//     forms.removeClass("error-color");
+//   }
 
-  e.preventDefault();
-});
+//   e.preventDefault();
+// });
 
 
 /*===============================================
