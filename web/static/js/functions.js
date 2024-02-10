@@ -681,8 +681,14 @@ if (mapCanvas.length) {
 $("#contactform").on("submit", function(e) {
   var name = $("#name").val();
   var email = $("#email").val();
-  var subject = $("#subject").val();
-  var message = $("#message").val();
+  var phone = $("#phone").val();
+  var age = $("#age").val();
+  var religion = $("#religion").val();
+  var gender = $("#gender").val();
+  var degree = $("#degree").val();
+  var campus_name = $("#campus_name").val();
+  var city_birthplace = $("#city_birthplace").val();
+  var city_residency = $("#city_residency").val();
 
   if (name === "") {
     $("#name").addClass("error-color");
@@ -690,11 +696,29 @@ $("#contactform").on("submit", function(e) {
   if (email === "") {
     $("#email").addClass("error-color");
   }
-  if (subject === "") {
-    $("#subject").addClass("error-color");
+  if (phone === "") {
+    $("#phone").addClass("error-color");
   }
-  if (message === "") {
-    $("#message").addClass("error-color");
+  if (age === "") {
+    $("#age").addClass("error-color");
+  }
+  if (religion === "") {
+    $("#religion").addClass("error-color");
+  }
+  if (gender === "") {
+    $("#gender").addClass("error-color");
+  }
+  if (degree === "") {
+    $("#degree").addClass("error-color");
+  }
+  if (campus_name === "") {
+    $("#campus_name").addClass("error-color");
+  }
+  if (city_birthplace === "") {
+    $("#city_birthplace").addClass("error-color");
+  }
+  if (city_residency === "") {
+    $("#city_residency").addClass("error-color");
   }
 
   else {
