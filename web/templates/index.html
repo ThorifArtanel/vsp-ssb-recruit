@@ -222,7 +222,7 @@
           </div>
           <!-- Form section -->
           <div class="contact-form">
-            <form action="https://landing-page-ssb-recruitment-fbsvmkxjvq-et.a.run.app/api/contact-form" method="POST" id="contactform" class="form-style-5">
+            <form enctype="multipart/form-data" method="POST" id="contactform" class="form-style-5">
               <div class="row gx-3 gy-0">
                 <div class="col-12 col-sm-6">
                   <label class="mb-1">Nama*</label>
@@ -280,203 +280,209 @@
                   <input type="file" id="cv" name="cv" placeholder="CV" required>
                 </div>
               </div>
-              <div class="col-12 col-sm-12" data-for="posisi">
-                <label>Pilihan Posisi:</label>
-                <!-- 1 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="internalauditseniormanager" name="Posisi[]" value="Internal Audit (Senior Manager)" >
-                  <label class="form-check-label" for="internalauditseniormanager">Internal Audit (Senior Manager)</label>
+              <div class="row gx-3 gy-0">
+                <div class="col-12 col-sm-4">
+                  <label>Pilihan Posisi:</label>
+                  <!-- 1 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="internalauditseniormanager" name="internalauditseniormanager" value="true" >
+                    <label class="form-check-label" for="internalauditseniormanager">Internal Audit (Senior Manager)</label>
+                  </div>
+                  <!-- 2 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cultureorganizationaldevelopmentmanager" name="cultureorganizationaldevelopmentmanager" value="true">
+                    <label class="form-check-label" for="cultureorganizationaldevelopmentmanager">Culture Organizational Development (Manager)</label>
+                  </div>
+                  <!-- 3 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="recruitmentandselectionstaff" name="recruitmentandselectionstaff" value="true">
+                    <label class="form-check-label" for="recruitmentandselectionstaff">Recruitment & Selection (Staff)</label>
+                  </div>
+                  <!-- 4 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="assessmentstaff" name="assessmentstaff" value="true">
+                    <label class="form-check-label" for="assessmentstaff"></label>Assessment (Staff)
+                  </div>
+                  <!-- 5 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="ssbcorpuniversitystaff" name="ssbcorpuniversitystaff" value="true">
+                    <label class="form-check-label" for="ssbcorpuniversitystaff">SSB Corp University (Staff)</label>
+                  </div>
+                  <!-- 6 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="financesupervisor" name="financesupervisor" value="true">
+                    <label class="form-check-label" for="financesupervisor">Finance (Supervisor)</label>
+                  </div>
+                  <!-- 7 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="softwareengineerstaff" name="softwareengineerstaff" value="true">
+                    <label class="form-check-label" for="softwareengineerstaff">Software Engineer (Staff)</label>
+                  </div>
+                  <!-- 8 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="p2omanagerheadoffice" name="p2omanagerheadoffice" value="true">
+                    <label class="form-check-label" for="p2omanagerheadoffice">P2O (Manager- Head Office)</label>
+                  </div>
+                  <!-- 9 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="p2osupervisorheadoffice" name="p2osupervisorheadoffice" value="true">
+                    <label class="form-check-label" for="p2osupervisorheadoffice">P2O (Supervisor - Head Office)</label>
+                  </div>
+                  <!-- 10 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cateringmanagerheadoffice" name="cateringmanagerheadoffice" value="true">
+                    <label class="form-check-label" for="cateringmanagerheadoffice">Catering (Manager - Head Office)</label>
+                  </div>
+                  <!-- 11 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cateringsupervisorheadoffice" name="cateringsupervisorheadoffice" value="true">
+                    <label class="form-check-label" for="cateringsupervisorheadoffice">Catering (Supervisor - Head Office)</label>
+                  </div>
+                  <!-- 12 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="produksimanagerheadoffice" name="produksimanagerheadoffice" value="true">
+                    <label class="form-check-label" for="produksimanagerheadoffice">Produksi (Manager - Head Office)</label>
+                  </div>
+                  <!-- 13 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="manageroutletsupervisor" name="manageroutletsupervisor" value="true">
+                    <label class="form-check-label" for="manageroutletsupervisor">Manager Outlet (Supervisor)</label>
+                  </div>
                 </div>
-                <!-- 2 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="cultureorganizationaldevelopmentmanager" name="Posisi[]" value="Culture Organizational Development (Manager)">
-                  <label class="form-check-label" for="cultureorganizationaldevelopmentmanager">Culture Organizational Development (Manager)</label>
+                <div class="col-12 col-sm-4">
+                  <!-- 14 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="generalaffairareastaff" name="generalaffairareastaff" value="true">
+                    <label class="form-check-label" for="generalaffairareastaff">General Affair Area (Staff)</label>
+                  </div>
+                  <!-- 15 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="financeareastaff" name="financeareastaff" value="true">
+                    <label class="form-check-label" for="financeareastaff">Finance Area (Staff)</label>
+                  </div>
+                  <!-- 16 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="accountingsupervisor" name="accountingsupervisor" value="true">
+                    <label class="form-check-label" for="accountingsupervisor">Accounting (Supervisor)</label>
+                  </div>
+                  <!-- 17 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="accountpayablecollectorstaff" name="accountpayablecollectorstaff" value="true">
+                    <label class="form-check-label" for="accountpayablecollectorstaff">Account Payable Collector (Staff)</label>
+                  </div>
+                  <!-- 18 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="bookkeeperstaff" name="bookkeeperstaff" value="true">
+                    <label class="form-check-label" for="bookkeeperstaff">Book Keeper (Staff)</label>
+                  </div>
+                  <!-- 19 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="generalaccountingbankstaff" name="generalaccountingbankstaff" value="true">
+                    <label class="form-check-label" for="generalaccountingbankstaff">General Accounting Bank (Staff)</label>
+                  </div>
+                  <!-- 20 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="staffarsipstaff" name="staffarsipstaff" value="true">
+                    <label class="form-check-label" for="staffarsipstaff">Staff Arsip (Staff)</label>
+                  </div>
+                  <!-- 21 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="staffcostaccountingstaff" name="staffcostaccountingstaff" value="true">
+                    <label class="form-check-label" for="staffcostaccountingstaff">Staff Cost Accounting (Staff)</label>
+                  </div>
+                  <!-- 22 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="recruitmentandassessmentstaff" name="recruitmentandassessmentstaff" value="true">
+                    <label class="form-check-label" for="recruitmentandassessmentstaff">Recruitment & Assessment (Staff)</label>
+                  </div>
+                  <!-- 23 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="learninganddevelopmentsupervisor" name="learninganddevelopmentsupervisor" value="true">
+                    <label class="form-check-label" for="learninganddevelopmentsupervisor">Learning & Development (Supervisor)</label>
+                  </div>
+                  <!-- 24 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="learninganddevelopmentstaff" name="learninganddevelopmentstaff" value="true">
+                    <label class="form-check-label" for="learninganddevelopmentstaff">Learning & Development (Staff)</label>
+                  </div>
+                  <!-- 25 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="hcareasupervisor" name="hcareasupervisor" value="true">
+                    <label class="form-check-label" for="hcareasupervisor">HC Area (Supervisor)</label>
+                  </div>
+                  <!-- 26 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="hcareastaff" name="hcareastaff" value="true">
+                    <label class="form-check-label" for="hcareastaff">HC Area (Staff)</label>
+                  </div>
                 </div>
-                <!-- 3 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="recruitmentandselectionstaff" name="Posisi[]" value="Recruitment & Selection (Staff)">
-                  <label class="form-check-label" for="recruitmentandselectionstaff">Recruitment & Selection (Staff)</label>
+                <div class="col-12 col-sm-4">
+                  <!-- 27 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="marketingseniormanager" name="marketingseniormanager" value="true">
+                    <label class="form-check-label" for="marketingseniormanager">Marketing (Senior Manager)</label>
+                  </div>
+                  <!-- 28 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="kontenkreatorsupervisor" name="kontenkreatorsupervisor" value="true">
+                    <label class="form-check-label" for="kontenkreatorsupervisor">Konten Kreator (Supervisor)</label>
+                  </div>
+                  <!-- 29 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="customerrelationmarketingsupervisor" name="customerrelationmarketingsupervisor" value="true">
+                    <label class="form-check-label" for="customerrelationmarketingsupervisor">Customer Relation Marketing (Supervisor)</label>
+                  </div>
+                  <!-- 30 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="marketingbrandingstaff" name="marketingbrandingstaff" value="true">
+                    <label class="form-check-label" for="marketingbrandingstaff">Marketing Branding (Staff)</label>
+                  </div>
+                  <!-- 31 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="marketingsalessupervisor" name="marketingsalessupervisor" value="true">
+                    <label class="form-check-label" for="marketingsalessupervisor">Marketing Sales (Supervisor)</label>
+                  </div>
+                  <!-- 32 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="surveyorstaff" name="surveyorstaff" value="true">
+                    <label class="form-check-label" for="surveyorstaff">Surveyor (Staff)</label>
+                  </div>
+                  <!-- 33 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="kemitraanstaff" name="kemitraanstaff" value="true">
+                    <label class="form-check-label" for="kemitraanstaff">Kemitraan (Staff)</label>
+                  </div>
+                  <!-- 34 -->
+                  <div class="form-check">
+                    <label class="form-check-label" for="supplychainmanagementseniormanager">Supply Chain Management (Senior Manager)</label>
+                    <input class="form-check-input" type="checkbox" id="supplychainmanagementseniormanager" name="supplychainmanagementseniormanager" value="true">
+                  </div>
+                  <!-- 35 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="logisticareasupervisor" name="logisticareasupervisor" value="true">
+                    <label class="form-check-label" for="logisticareasupervisor">Logistic Area (Supervisor)</label>
+                  </div>
+                  <!-- 36 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="purchasingstaff" name="purchasingstaff" value="true">
+                    <label class="form-check-label" for="purchasingstaff">Purchasing (Staff)</label>
+                  </div>
+                  <!-- 37 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="supplyplanstaff" name="supplyplanstaff" value="true">
+                    <label class="form-check-label" for="supplyplanstaff">Supply Plan (Staff)</label>
+                  </div>
+                  <!-- 38 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="warehousesupervisor" name="warehousesupervisor" value="true">
+                    <label class="form-check-label" for="warehousesupervisor">Warehouse (Supervisor)</label>
+                  </div>
+                  <!-- 39 -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="maintenanceataumekaniksupervisor" name="maintenanceataumekaniksupervisor" value="true">
+                    <label class="form-check-label" for="maintenanceataumekaniksupervisor">Maintenance / Mekanik (Supervisor)</label>
+                  </div>
                 </div>
-                <!-- 4 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="assessmentstaff" name="Posisi[]" value="Assessment (Staff)">
-                  <label class="form-check-label" for="assessmentstaff"></label>Assessment (Staff)
-                </div>
-                <!-- 5 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="ssbcorpuniversitystaff" name="Posisi[]" value="SSB Corp University (Staff)">
-                  <label class="form-check-label" for="ssbcorpuniversitystaff">SSB Corp University (Staff)</label>
-                </div>
-                <!-- 6 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="financesupervisor" name="Posisi[]" value="Finance (Supervisor)">
-                  <label class="form-check-label" for="financesupervisor">Finance (Supervisor)</label>
-                </div>
-                <!-- 7 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="softwareengineerstaff" name="Posisi[]" value="Software Engineer (Staff)">
-                  <label class="form-check-label" for="softwareengineerstaff">Software Engineer (Staff)</label>
-                </div>
-                <!-- 8 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="p2omanagerheadoffice" name="Posisi[]" value="P2O (Manager- Head Office)">
-                  <label class="form-check-label" for="p2omanagerheadoffice">P2O (Manager- Head Office)</label>
-                </div>
-                <!-- 9 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="p2osupervisorheadoffice" name="Posisi[]" value="P2O (Supervisor - Head Office)">
-                  <label class="form-check-label" for="p2osupervisorheadoffice">P2O (Supervisor - Head Office)</label>
-                </div>
-                <!-- 10 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="cateringmanagerheadoffice" name="Posisi[]" value="Catering (Manager - Head Office)">
-                  <label class="form-check-label" for="cateringmanagerheadoffice">Catering (Manager - Head Office)</label>
-                </div>
-                <!-- 11 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="cateringsupervisorheadoffice" name="Posisi[]" value="Catering (Supervisor - Head Office)">
-                  <label class="form-check-label" for="cateringsupervisorheadoffice">Catering (Supervisor - Head Office)</label>
-                </div>
-                <!-- 12 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="produksimanagerheadoffice" name="Posisi[]" value="Produksi (Manager - Head Office)">
-                  <label class="form-check-label" for="produksimanagerheadoffice">Produksi (Manager - Head Office)</label>
-                </div>
-                <!-- 13 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="manageroutletsupervisor" name="Posisi[]" value="Manager Outlet (Supervisor)">
-                  <label class="form-check-label" for="manageroutletsupervisor">Manager Outlet (Supervisor)</label>
-                </div>
-                <!-- 14 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="generalaffairareastaff" name="Posisi[]" value="General Affair Area (Staff)">
-                  <label class="form-check-label" for="generalaffairareastaff">General Affair Area (Staff)</label>
-                </div>
-                <!-- 15 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="financeareastaff" name="Posisi[]" value="Finance Area (Staff)">
-                  <label class="form-check-label" for="financeareastaff">Finance Area (Staff)</label>
-                </div>
-                <!-- 16 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="accountingsupervisor" name="Posisi[]" value="Accounting (Supervisor)">
-                  <label class="form-check-label" for="accountingsupervisor">Accounting (Supervisor)</label>
-                </div>
-                <!-- 17 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="accountpayablecollectorstaff" name="Posisi[]" value="Account Payable Collector (Staff)">
-                  <label class="form-check-label" for="accountpayablecollectorstaff">Account Payable Collector (Staff)</label>
-                </div>
-                <!-- 18 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="bookkeeperstaff" name="Posisi[]" value="Book Keeper (Staff)">
-                  <label class="form-check-label" for="bookkeeperstaff">Book Keeper (Staff)</label>
-                </div>
-                <!-- 19 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="generalaccountingbankstaff" name="Posisi[]" value="General Accounting Bank (Staff)">
-                  <label class="form-check-label" for="generalaccountingbankstaff">General Accounting Bank (Staff)</label>
-                </div>
-                <!-- 20 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="staffarsipstaff" name="Posisi[]" value="Staff Arsip (Staff)">
-                  <label class="form-check-label" for="staffarsipstaff">Staff Arsip (Staff)</label>
-                </div>
-                <!-- 21 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="staffcostaccountingstaff" name="Posisi[]" value="Staff Cost Accounting (Staff)">
-                  <label class="form-check-label" for="staffcostaccountingstaff">Staff Cost Accounting (Staff)</label>
-                </div>
-                <!-- 22 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="recruitmentandassessmentstaff" name="Posisi[]" value="Recruitment & Assessment (Staff)">
-                  <label class="form-check-label" for="recruitmentandassessmentstaff">Recruitment & Assessment (Staff)</label>
-                </div>
-                <!-- 23 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="learninganddevelopmentsupervisor" name="Posisi[]" value="Learning & Development (Supervisor)">
-                  <label class="form-check-label" for="learninganddevelopmentsupervisor">Learning & Development (Supervisor)</label>
-                </div>
-                <!-- 24 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="learninganddevelopmentstaff" name="Posisi[]" value="Learning & Development (Staff)">
-                  <label class="form-check-label" for="learninganddevelopmentstaff">Learning & Development (Staff)</label>
-                </div>
-                <!-- 25 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="hcareasupervisor" name="Posisi[]" value="HC Area (Supervisor)">
-                  <label class="form-check-label" for="hcareasupervisor">HC Area (Supervisor)</label>
-                </div>
-                <!-- 26 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="hcareastaff" name="Posisi[]" value="HC Area (Staff)">
-                  <label class="form-check-label" for="hcareastaff">HC Area (Staff)</label>
-                </div>
-                <!-- 27 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="marketingseniormanager" name="Posisi[]" value="Marketing (Senior Manager)">
-                  <label class="form-check-label" for="marketingseniormanager">Marketing (Senior Manager)</label>
-                </div>
-                <!-- 28 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="kontenkreatorsupervisor" name="Posisi[]" value="Konten Kreator (Supervisor)">
-                  <label class="form-check-label" for="kontenkreatorsupervisor">Konten Kreator (Supervisor)</label>
-                </div>
-                <!-- 29 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="customerrelationmarketingsupervisor" name="Posisi[]" value="Customer Relation Marketing (Supervisor)">
-                  <label class="form-check-label" for="customerrelationmarketingsupervisor">Customer Relation Marketing (Supervisor)</label>
-                </div>
-                <!-- 30 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="marketingbrandingstaff" name="Posisi[]" value="Marketing Branding (Staff)">
-                  <label class="form-check-label" for="marketingbrandingstaff">Marketing Branding (Staff)</label>
-                </div>
-                <!-- 31 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="marketingsalessupervisor" name="Posisi[]" value="Marketing Sales (Supervisor)">
-                  <label class="form-check-label" for="marketingsalessupervisor">Marketing Sales (Supervisor)</label>
-                </div>
-                <!-- 32 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="surveyorstaff" name="Posisi[]" value="Surveyor (Staff)">
-                  <label class="form-check-label" for="surveyorstaff">Surveyor (Staff)</label>
-                </div>
-                <!-- 33 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="kemitraanstaff" name="Posisi[]" value="Kemitraan (Staff)">
-                  <label class="form-check-label" for="kemitraanstaff">Kemitraan (Staff)</label>
-                </div>
-                <!-- 34 -->
-                <div class="form-check">
-                  <label class="form-check-label" for="supplychainmanagementseniormanager">Supply Chain Management (Senior Manager)</label>
-                  <input class="form-check-input" type="checkbox" id="supplychainmanagementseniormanager" name="Posisi[]" value="Supply Chain Management (Senior Manager)">
-                </div>
-                <!-- 35 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="logisticareasupervisor" name="Posisi[]" value="Logistic Area (Supervisor)">
-                  <label class="form-check-label" for="logisticareasupervisor">Logistic Area (Supervisor)</label>
-                </div>
-                <!-- 36 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="purchasingstaff" name="Posisi[]" value="Purchasing (Staff)">
-                  <label class="form-check-label" for="purchasingstaff">Purchasing (Staff)</label>
-                </div>
-                <!-- 37 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="supplyplanstaff" name="Posisi[]" value="Supply Plan (Staff)">
-                  <label class="form-check-label" for="supplyplanstaff">Supply Plan (Staff)</label>
-                </div>
-                <!-- 38 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="warehousesupervisor" name="Posisi[]" value="Warehouse (Supervisor)">
-                  <label class="form-check-label" for="warehousesupervisor">Warehouse (Supervisor)</label>
-                </div>
-                <!-- 39 -->
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="maintenanceataumekaniksupervisor" name="Posisi[]" value="Maintenance / Mekanik (Supervisor)">
-                  <label class="form-check-label" for="maintenanceataumekaniksupervisor">Maintenance / Mekanik (Supervisor)</label>
-                </div><br>
               </div>
               <button class="button button-lg button-outline-dark" type="submit">Kirim</button>
             </form>
